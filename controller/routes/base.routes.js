@@ -7,7 +7,7 @@ Router.get('/', (req, res) => {
 })
 
 Router.get('/signup', (req, res) => {
-	res.render('signup', {errors: []})
+	res.render('signup', { errors: [] })
 })
 
 

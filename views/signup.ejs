@@ -9,13 +9,19 @@
     </head>
     <body>
         <% errors.forEach(error => { %>
-            <p><%= error %></p>
+        <p><%= error %></p>
         <% }) %>
         <form action="/auth/local/signup" method="post">
-            <input name="email" placeholder="email"/><br>
-            <input name="username" placeholder="username"/><br>
-            <input type="password" name="password" placeholder="password"/><br>
-            <input name="profilePic" placeholder="your profile picture link"/> <input type="submit"/>
+            <input name="email" placeholder="email"/>
+            <br>
+            <input name="username" placeholder="username"/>
+            <br>
+            <input
+                    type="password" name="password" placeholder="password"/>
+            <br>
+            <input name="profilePic"
+                    placeholder="your profile picture link"/>
+            <input type="submit"/>
         </form>
     </body>
 </html>

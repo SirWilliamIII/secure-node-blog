@@ -1,23 +1,23 @@
-const express = require('express'),
-      mongoose = require('mongoose'),
+const express    = require('express'),
+      mongoose   = require('mongoose'),
       bodyParser = require('body-parser'),
-      session = require('express-session'),
-      ejs = require('ejs'),
-      passport = require('passport'),
-      path = require('path')
+      session    = require('express-session'),
+      ejs        = require('ejs'),
+      passport   = require('passport'),
+      path       = require('path')
 
 const app = express()
 
 /*  Require route files */
-const baseRoutes = require('./controller/routes/base.routes'),
-      userRoutes = require('./controller/routes/user.routes'),
-      localRoutes = require('./controller/routes/local.routes'),
+const baseRoutes    = require('./controller/routes/base.routes'),
+      userRoutes    = require('./controller/routes/user.routes'),
+      localRoutes   = require('./controller/routes/local.routes'),
       articleRoutes = require('./controller/routes/article.routes'),
-      fbRoutes = require('./controller/routes/fb.routes')
+      fbRoutes      = require('./controller/routes/fb.routes')
 
 /*  Config and settings */
-const key = require('./private/key'),
-      db = key.db.remote || 'mongodb://localhost/' + key.db.local,
+const key  = require('./private/key'),
+      db   = key.db.remote || 'mongodb://localhost/' + key.db.local,
       port = process.env.PORT || 3000
 
 /*  Connect to Mongoose, Mongoose connects to MongoDB */

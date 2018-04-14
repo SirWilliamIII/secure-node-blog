@@ -1,23 +1,23 @@
 const mongoose = require('mongoose'),
-      Schema = mongoose.Schema,
+      Schema   = mongoose.Schema,
       ObjectId = Schema.Types.ObjectId
 
 
 const UserSchema = new Schema({
-	email: String,
-	facebookId: String,
-	password: String,
-	profilePic: String,
+	email:           String,
+	facebookId:      String,
+	password:        String,
+	profilePic:      String,
 	peopleFollowing: [String],
-	followers: [String],
-	username: {
-		type: String,
+	followers:       [String],
+	username:        {
+		type:     String,
 		required: true,
-		unique: true
+		unique:   true
 	},
-	articles: {
+	articles:        {
 		type: ObjectId,
-		ref: 'Article'
+		ref:  'Article'
 	}
 })
 

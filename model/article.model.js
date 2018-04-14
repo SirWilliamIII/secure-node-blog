@@ -1,20 +1,20 @@
 const mongoose = require('mongoose'),
-      Schema = mongoose.Schema,
+      Schema   = mongoose.Schema,
       ObjectId = Schema.Types.ObjectId
 
 
 const ArticleSchema = new Schema({
-	title: String,
+	title:       String,
 	description: String,
-	image: String,
-	tags: [String],
-	author: {
-		type: ObjectId,
-		ref: 'User',
+	image:       String,
+	tags:        [String],
+	author:      {
+		type:     ObjectId,
+		ref:      'User',
 		required: true
 	},
-	date: {
-		type: Date,
+	date:        {
+		type:    Date,
 		default: Date.now
 	}
 })
